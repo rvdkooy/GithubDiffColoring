@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+
+  "name": "GithubDiffColoring",
+  "description": "Adjusts the github diff coloring so that it is more readable to red/green color blinded people",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["http://www.github.com/*", "https://github.com/*"],
+      "css": ["style.css"]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+
+/* 
+Additions 
+*/
+.blob-num-addition {
+  background-color: green!important;
+  border-color: green!important;
+  color: white!important;
+}
+
+.blob-code-addition {
+  background-color: green!important;
+  color: white!important;
+}
+
+.blob-code-addition span {
+  background-color: green!important;
+  color: white!important;
+}
+
+
+ /*  
+ Deletions 
+
+.blob-num-deletion {
+  background-color: #206CFF!important;
+  border-color: #206CFF!important;
+  color: white!important;
+}
+
+.blob-code-deletion {
+  background-color: #206CFF!important;
+  color: white!important;
+}
+ */
