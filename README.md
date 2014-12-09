@@ -1,11 +1,11 @@
 GithubDiffColoring
 ==================
 
-Adjusts the github diff coloring so that it is more readable to red/green color blinded people
+A chrome extension that adjusts the github diff coloring so that it is more readable to red/green color blinded people
 
 Manual installation:    
 
-+ Install the extension in chrome:
+  - clone this repo
   - browse to: chrome://extensions/
   - check developer mode in upper right corner
   - click the button "load unpacked extension" and select the folder where this repo is cloned
