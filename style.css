@@ -9,15 +9,8 @@ Additions
 }
 
 .blob-code-addition {
-  background-color: green!important;
-  color: white!important;
+  background-color: LightGreen!important;
 }
-
-.blob-code-addition span {
-  background-color: green!important;
-  color: white!important;
-}
-
 
  /*  
  Deletions 
