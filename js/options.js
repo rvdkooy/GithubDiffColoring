@@ -2,6 +2,7 @@
 function save_options() {
     var addedHighlight = document.getElementById('addedHighlight').value;
     var deletedHighlight = document.getElementById('deletedHighlight').value;
+    
     chrome.storage.sync.set({
         addedHighlight: addedHighlight,
         deletedHighlight: deletedHighlight
@@ -18,9 +19,12 @@ function save_options() {
 // Restores select box and checkbox state using the preferences
 // stored in chrome.storage.
 function restore_options() {
+    
     chrome.storage.sync.get({
-        addedHighlight: '#ffecec',
-        deletedHighlight: '#ffdddd'
+        addedNum: '90EE90',
+        addedHighlight: '#00FF00',
+        deletedHighlight: '#FFDDDD',
+        deletedNum: '',
     }, function(items) {
         document.getElementById('addedHighlight').value = items.addedHighlight;
         document.getElementById('deletedHighlight').value = items.deletedHighlight;
