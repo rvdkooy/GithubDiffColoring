@@ -1,0 +1,32 @@
+
+/* 
+Additions 
+*/
+.blob-num-addition {
+  background-color: green!important;
+  border-color: green!important;
+  color: white!important;
+}
+
+.blob-code-addition {
+  background-color: LightGreen!important;
+}
+
+h1{
+  border-bottom: 1px solid black;
+}
+
+ .row{
+ 	width: 100%;
+ 	margin: 5px;
+ }
+
+ .row .left{
+ 	display: inline-block;
+ 	width: 200px;
+ }
+
+ .row .right{
+ 	display: inline-block;
+ 	width: 200px;
+ }
