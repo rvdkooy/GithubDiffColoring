@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
 
-  "name": "GithubDiffColoring",
+  "name": "Github Diff Coloring",
   "description": "Adjusts the github diff coloring so that it is more readable to red/green color blinded people",
   "version": "1.0",
   "options_page": "options.html",
@@ -14,7 +14,7 @@
   "content_scripts": [
     {
       "matches": ["http://www.github.com/*", "https://github.com/*"],
-      "js": ["js/jqlite.1.1.1.min.js", "js/shared.js", "js/default.js"]
+      "js": ["js/shared.js", "js/default.js"]
     }
   ]
 }
