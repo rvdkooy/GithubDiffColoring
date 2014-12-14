@@ -3,7 +3,7 @@
 
   "name": "Github Diff Coloring",
   "description": "Adjusts the github diff coloring so that it is more readable to red/green color blinded people",
-  "version": "1.0",
+  "version": "1.1",
   "options_page": "options.html",
   "permissions": [
       "storage"
