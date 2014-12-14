@@ -8,6 +8,9 @@
   "permissions": [
       "storage"
   ],
+  "icons": { "16": "resources/icon16.png",
+           "48": "resources/icon48.png",
+          "128": "resources/icon128.png" },
   "content_scripts": [
     {
       "matches": ["http://www.github.com/*", "https://github.com/*"],
