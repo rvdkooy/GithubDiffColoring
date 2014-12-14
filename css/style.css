@@ -1,20 +1,9 @@
 
-/* 
-Additions 
-*/
-.blob-num-addition {
-  background-color: green!important;
-  border-color: green!important;
-  color: white!important;
+h3{
+	margin-bottom: 5px;
+	border-bottom: 1px solid black;
 }
 
-.blob-code-addition {
-  background-color: LightGreen!important;
-}
-
-h1{
-  border-bottom: 1px solid black;
-}
 
  .row{
  	width: 100%;

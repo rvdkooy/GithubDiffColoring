@@ -1,31 +1,43 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Github Diff Coloring Extension Options</title>
-</head>
-<body>
-    <script type="text/javascript" src="js/jscolor.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <h1>Git Diff Coloring Options</h1>
-    <div class="row">
-        <div class="left">
-            <span>Added highlight:</span>
-        </div>
-        <div class="right">
-            <input id="addedHighlight" class="color {hash:true}">
-        </div>
-    </div>
+    <head>
+        <title>Github Diff Coloring Extension Options</title>
+    </head>
+    <body>
+        <script type="text/javascript" src="js/jscolor.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <h1>Github Diff Coloring Options</h1>
+        
 
-    <div class="row">
-        <div class="left">
-            <span>Deleted highlight:</span>
+        <h3>Additions</h3>
+        <div class="row">
+            <div class="left">
+                <span>Gutter color:</span>
+                <input id="additionGutter" class="color {hash:true}">
+            </div>
+            <div class="right">
+                <span>Code highlight color:</span>
+                <input id="additionCode" class="color {hash:true}">
+            </div>
         </div>
-        <div class="right">
-            <input id="deletedHighlight" class="color {hash:true}">
+
+        <h3>Deletions</h3>
+
+        <div class="row">
+            <div class="left">
+                <span>Gutter color:</span>
+                <input id="deletionGutter" class="color {hash:true}">
+            </div>
+            <div class="right">
+                <span>Code highlight color:</span>
+                <input id="deletionCode" class="color {hash:true}">
+            </div>
         </div>
-    </div>
-    <div id="status"></div>
-    <button id="save">Save</button>
-    <script src="js/options.js"></script>
-</body>
+
+        <div id="status"></div>
+        <button id="save">Save</button>
+        <button id="restore">Restore defaults</button>
+        <script src="js/shared.js"></script>
+        <script src="js/options.js"></script>
+    </body>
 </html>

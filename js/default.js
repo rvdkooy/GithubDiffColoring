@@ -1,14 +1,25 @@
 $(function(){
 
-	chrome.storage.sync.get({
-        addedNum: '#90EE90',
-        addedHighlight: '#00FF00',
-        deletedHighlight: '#FFDDDD',
-        deletedNum: '',
-    }, function(items) {
+    
 
-    	$('.blob-num-addition').css('background-color', items.addedNum);
-    	$('.blob-num-addition').css('color', 'white');
-		$('.blob-code-addition').css('background-color', '#00FF00');
+    chrome.storage.local.get(GitHubDiffSettings.settingsKey, function(result) {
+
+        if(result.diffsettings){
+            result = JSON.parse(result.diffsettings);
+        }
+        else{
+            result.additionGutter = GitHubDiffSettings.defaults.additionGutter;
+            result.additionCode = GitHubDiffSettings.defaults.additionCode;
+            result.deletionGutter = GitHubDiffSettings.defaults.deletionGutter;
+            result.deletionCode = GitHubDiffSettings.defaults.deletionCode;
+        }
+
+        $('.blob-num-addition').css('background-color', '#' + result.additionGutter);
+        $('.blob-num-addition').css('color', 'white');
+        $('.blob-code-addition').css('background-color', '#' + result.additionCode);
+
+        $('.blob-num-deletion').css('background-color', '#' + result.deletionGutter);
+        $('.blob-num-deletion').css('color', 'white');
+        $('.blob-code-deletion').css('background-color', '#' + result.deletionCode);
     });
 })
