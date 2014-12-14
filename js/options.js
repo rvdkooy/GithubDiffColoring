@@ -3,7 +3,7 @@ var additionCode = document.getElementById('additionCode')
 var deletionGutter = document.getElementById('deletionGutter')
 var deletionCode = document.getElementById('deletionCode')
 
-function save_options() {
+function save_options(message) {
     
     var values = {
         additionGutter: additionGutter.value,
@@ -14,10 +14,10 @@ function save_options() {
     var obj = {};
     obj[GitHubDiffSettings.settingsKey] = JSON.stringify(values);
     
-    chrome.storage.local.set(obj, function() {
+    chrome.storage.sync.set(obj, function() {
         
         var status = document.getElementById('status');
-        status.textContent = 'Options saved.';
+        status.textContent = message;
         setTimeout(function() {
             status.textContent = '';
         }, 1500);
@@ -26,7 +26,7 @@ function save_options() {
 
 function restore_options() {
     
-    chrome.storage.local.get(GitHubDiffSettings.settingsKey, function(result) {
+    chrome.storage.sync.get(GitHubDiffSettings.settingsKey, function(result) {
 
         if(result.diffsettings){
             result = JSON.parse(result.diffsettings);
@@ -57,16 +57,12 @@ function restore_options() {
 
 function restore_defaults() {
     
-    chrome.storage.local.clear();
+    chrome.storage.sync.clear();
         
     restore_options();
-    var status = document.getElementById('status');
-    status.textContent = 'Options restored.';
-    setTimeout(function() {
-        status.textContent = '';
-    }, 1500);
+    save_options('Options restored.');
 }
 
 document.addEventListener('DOMContentLoaded', restore_options);
-document.getElementById('save').addEventListener('click', save_options);
+document.getElementById('save').addEventListener('click', function(){ save_options('Options saved.'); });
 document.getElementById('restore').addEventListener('click', restore_defaults);

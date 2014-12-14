@@ -2,7 +2,7 @@ $(function(){
 
     
 
-    chrome.storage.local.get(GitHubDiffSettings.settingsKey, function(result) {
+    chrome.storage.sync.get(GitHubDiffSettings.settingsKey, function(result) {
 
         if(result.diffsettings){
             result = JSON.parse(result.diffsettings);
