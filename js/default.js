@@ -14,9 +14,11 @@ chrome.storage.sync.get(GitHubDiffSettings.settingsKey, function(result) {
 	style.type = 'text/css';
 	
 	var innerHtml = '.blob-num-addition { background-color: #' + result.additionGutter + ' !important;  }';
-	innerHtml += '.blob-code-addition { background-color: #' + result.additionCode + ' !important;  }';
+    innerHtml += '.blob-code-addition { background-color: #' + result.additionCode + ' !important;  }';
+	innerHtml += '.blob-code-addition .x { background-color: #' + result.additionCode + ' !important;  }';
 	innerHtml += '.blob-num-deletion { background-color: #' + result.deletionGutter + ' !important;  }';
-	innerHtml += '.blob-code-deletion { background-color: #' + result.deletionCode + ' !important;  }';
+    innerHtml += '.blob-code-deletion { background-color: #' + result.deletionCode + ' !important;  }';
+	innerHtml += '.blob-code-deletion .x { background-color: #' + result.deletionCode + ' !important;  }';
 
 	style.innerHTML = innerHtml
 	
